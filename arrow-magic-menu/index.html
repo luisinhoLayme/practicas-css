@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" media="all">
+  <title>Arrow | Magic Menu Indicator</title>
+</head>
+<body>
+  <ul>
+    <span id="marker"></span>
+    <li><a href="#">home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Our Services</a></li>
+    <li><a href="#">Porfolio</a></li>
+    <li><a href="#">Team</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <script>
+    let marker = document.querySelector('#marker')
+    let item = document.querySelectorAll('ul li a')
+
+    function Indicator(e) {
+      marker.style.top = e.offsetTop+ 'px'
+      marker.style.width = e.offsetWidth+ 'px'
+    }
+
+    item.forEach(link => {
+      link.addEventListener('mousemove', (e) => {
+        Indicator(e.target)
+      })
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas, sans-serif;
+}
+body {
+  background-color: #000;
+}
+section {
+  position: relative;
+  width: 100%;
+  padding: 50px;
+}
+.circle {
+  position: relative;
+  overflow: hidden;
+}
+.circle.circle1 {
+  width: 500px;
+  height: 500px;
+  float: left;
+  border-radius: 50%;
+  margin: 20px;
+  background-color: #333;
+  shape-outside: circle();
+}
+.circle.circle2 {
+  width: 300px;
+  height: 300px;
+  float: right;
+  border-radius: 50%;
+  margin: 20px;
+  background-color: #333;
+  shape-outside: circle();
+}
+section h2,
+section p {
+  color: #fff;
+}
